@@ -3,15 +3,15 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 export default class AsyncStorageProvider implements IDataProvider {
   load(key: string): Promise<string | null> {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       AsyncStorage.getItem(key)
         .then((result) => {
           if (result) {
             resolve(result);
           }
-          reject();
+          resolve(null);
         })
-        .catch(() => reject());
+        .catch(() => resolve(null));
     });
   }
 

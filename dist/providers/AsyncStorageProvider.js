@@ -15,15 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const async_storage_1 = __importDefault(require("@react-native-community/async-storage"));
 class AsyncStorageProvider {
     load(key) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             async_storage_1.default.getItem(key)
                 .then((result) => {
                 if (result) {
                     resolve(result);
                 }
-                reject();
+                resolve(null);
             })
-                .catch(() => reject());
+                .catch(() => resolve(null));
         });
     }
     remove(key) {
