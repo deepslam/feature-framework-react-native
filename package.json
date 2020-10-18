@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/deepslam/feature-framework-react-native#readme",
   "dependencies": {
-    "@feature-framework/core": "^0.4.3",
+    "@feature-framework/core": "^0.4.4",
     "@react-native-community/async-storage": "^1.12.1",
     "tslib": "^2.0.3"
   },

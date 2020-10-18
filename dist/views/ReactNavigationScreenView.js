@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@feature-framework/core");
-class ReactNavigationScreen extends core_1.View {
+exports.ReactNavigationScreenView = void 0;
+class ReactNavigationScreenView {
 }
-exports.default = ReactNavigationScreen;
+exports.ReactNavigationScreenView = ReactNavigationScreenView;
 //# sourceMappingURL=ReactNavigationScreenView.js.map

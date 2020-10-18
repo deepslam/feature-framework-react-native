@@ -1,14 +1,12 @@
-import React from 'react';
-import { View } from '@feature-framework/core';
+import { IView } from '@feature-framework/core';
 
 export type ReactNavigationScreenType = {
-  component: React.ReactElement;
+  component: JSX.Element;
   name: string;
   initialParams?: unknown;
 };
 
-export default abstract class ReactNavigationScreen extends View<
-  ReactNavigationScreenType
-> {
-  abstract readonly components: Record<string, ReactNavigationScreenType>;
+export class ReactNavigationScreenView
+  implements IView<ReactNavigationScreenType> {
+  [key: string]: ReactNavigationScreenType;
 }
