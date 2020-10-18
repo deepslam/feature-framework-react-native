@@ -5,5 +5,6 @@ export declare type ReactNavigationScreenType = {
     name: string;
     initialParams?: unknown;
 };
-export default class ReactNavigationScreen extends View<ReactNavigationScreenType> {
+export default abstract class ReactNavigationScreen extends View<ReactNavigationScreenType> {
+    abstract readonly components: Record<string, ReactNavigationScreenType>;
 }
