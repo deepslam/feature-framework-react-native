@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import { IView } from '@feature-framework/core';
 export declare type ReactNavigationScreenType = {
-    component: JSX.Element;
+    component: React.ComponentType<any>;
     name: string;
     initialParams?: unknown;
 };
